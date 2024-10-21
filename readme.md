@@ -1,7 +1,3 @@
-Here is a README file tailored to your stock trader co-pilot project:
-
----
-
 # Stock Trader Copilot
 
 The **Stock Trader Copilot** is an interactive assistant designed to help traders and analysts quickly retrieve financial data, answer stock-related questions, and perform various financial tasks. It integrates with multiple financial tools and data sources to provide comprehensive market insights in real-time using OpenAI's language models.
@@ -33,7 +29,7 @@ The **Stock Trader Copilot** is an interactive assistant designed to help trader
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/stock-trader-copilot.git
+    git clone https://github.com/VictorHadziristic/Finchat
     cd stock-trader-copilot
     ```
 
@@ -51,7 +47,7 @@ To start the Stock Trader Copilot:
 1. Ensure that your OpenAI API key and other environment variables are set.
 2. Run the `run_conversation()` function in the script:
     ```bash
-    python stock_trader_copilot.py
+    python main.py
     ```
 
 The co-pilot will guide you through the conversation, where you can ask various questions about stock data and other market-related topics.
@@ -69,8 +65,8 @@ Copilot: [AAPL quote details]
 
 Set the following environment variables:
 
-- `OPEN_AI_API_KEY`: Your OpenAI API key for accessing GPT-4.
-- Any other relevant API keys for the financial data tools you're using.
+- `OPEN_AI_API_KEY`: Your OpenAI API key for accessing GPT-4o.
+- `FMP_API_KEY`: Your FMP API key.
 
 You can set these in your terminal session or create a `.env` file.
 
@@ -88,15 +84,3 @@ The co-pilot is integrated with several tools to fetch financial data. Here is a
 - And many more...
 
 See the `fmp_api.py` and `utils.py` for additional tools and custom utility functions.
-
-## Contributing
-
-Contributions are welcome! Please fork the repository and submit a pull request. For major changes, open an issue first to discuss what you would like to change.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-This README provides an overview of your project and instructions for users to install, set up, and run the stock trader co-pilot tool. Let me know if you need to modify anything!
