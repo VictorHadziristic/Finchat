@@ -1,0 +1,80 @@
+{
+    "company_name":"Cloudflare, Inc.",
+    "fiscal_year_end":"2023-12-31",
+    "risk_factors":[
+       {
+          "description":"We have a history of net losses and may not be able to achieve or sustain profitability in the future.",
+          "impact":"We have incurred net losses in all periods since we began operations and we may not achieve or maintain profitability in the future."
+       },
+       {
+          "description":"We have experienced rapid revenue growth, which may not be indicative of our future performance.",
+          "impact":"Our rate of revenue growth has slowed in recent periods and may continue to slow in future periods."
+       },
+       {
+          "description":"Adverse economic conditions, including reduced spending on products and solutions for network security, performance, and reliability, may adversely impact our revenue and profitability.",
+          "impact":"Our operations and financial performance depend in part on worldwide economic conditions and the impact these conditions have on levels of spending."
+       },
+       {
+          "description":"If we are unable to attract new paying and free customers, our future results of operations could be harmed.",
+          "impact":"The success of our business principally depends on our ability to attract new paying and free customers."
+       },
+       {
+          "description":"We face intense and increasing competition, which could adversely affect our business, financial condition, and results of operations.",
+          "impact":"The markets for our network and products are intensely competitive and characterized by rapid changes in technology."
+       }
+    ],
+    "business_description":{
+       "overview":"Cloudflare’s mission is to help build a better Internet. We deliver a broad range of services to businesses of all sizes and in all geographies, making them more secure, enhancing the performance of their business-critical applications, and eliminating the cost and complexity of managing individual network hardware.",
+       "products_and_services":"Website and application services, secure access service edge (SASE) platform, developer-based solutions, consumer offerings.",
+       "subsidiaries":null,
+       "industry":"Cloud services and cybersecurity."
+    },
+    "legal_proceedings":[
+       {
+          "description":"We are currently, and may be in the future, party to intellectual property rights claims and other litigation matters that, if resolved adversely, could have a material impact on our business."
+       }
+    ],
+    "financial_statements":{
+       "income_statement":"Revenue of $1,296.7 million, net loss of $183.9 million for the year ended December 31, 2023.",
+       "balance_sheet":"Total assets of $2,759.8 million, total liabilities of $1,996.7 million as of December 31, 2023.",
+       "cash_flow_statement":"Net cash provided by operating activities of $254.4 million for the year ended December 31, 2023.",
+       "footnotes":"Includes stock-based compensation expense of $273.9 million."
+    },
+    "management_discussion_analysis":{
+       "financial_conditions":"We have generated significant operating losses from our operations as reflected in our accumulated deficit of $1,023.8 million as of December 31, 2023.",
+       "operations":"Revenue increased by $321.5 million, or 33%, for the year ended December 31, 2023 compared to the year ended December 31, 2022.",
+       "liquidity_and_capital_resources":"We believe that our existing cash, cash equivalents, and available-for-sale securities will be sufficient to meet our working capital and capital expenditure needs for at least the next 12 months."
+    },
+    "executive_compensation":[
+       {
+          "name":"Matthew Prince",
+          "title":"Chief Executive Officer",
+          "salary":400000.0,
+          "bonus":null,
+          "stock_options":1000000.0,
+          "total_compensation":1400000.0
+       },
+       {
+          "name":"Michelle Zatlyn",
+          "title":"President and Chief Operating Officer",
+          "salary":350000.0,
+          "bonus":null,
+          "stock_options":800000.0,
+          "total_compensation":1150000.0
+       },
+       {
+          "name":"Thomas Seifert",
+          "title":"Chief Financial Officer",
+          "salary":300000.0,
+          "bonus":null,
+          "stock_options":600000.0,
+          "total_compensation":900000.0
+       }
+    ],
+    "financial_summary":{
+       "revenue":1296745.0,
+       "net_income":-183949.0,
+       "total_assets":2759767.0,
+       "total_liabilities":1996720.0
+    }
+ }
