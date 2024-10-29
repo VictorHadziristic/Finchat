@@ -517,8 +517,13 @@ def get_sec_filings(symbol, page=0):
     Returns:
         dict: SEC filings data for the company.
     """
-    request_params = {"page": page, "type": ["10-K", "10-Q", "20-F"], "limit": 10}
-    return _get(f"v3/sec_filings/{symbol}", **request_params)
+    request_params = {"page": page, "type": ["10-K", "10-Q", "20-F"], "limit": 3}
+    urls = []
+    response = _get(f"v3/sec_filings/{symbol}", **request_params)
+    for entry in response:
+        urls.append(entry["link"])
+
+    return urls
 
 @tool
 def get_sec_rss_feed(type=None, from_date=None, to_date=None, is_done=True):
@@ -565,3 +570,18 @@ def get_earnings_calendar(from_date=None, to_date=None):
     if to_date:
         request_params["to"] = to_date
     return _get("v3/earning_calendar", **request_params)
+
+@tool
+def get_earnings_historical(ticker: str, limit: int = 10):
+    """
+    Get a list of of historical & upcoming earnings announcements for a specific company, including the date, estimated EPS, and actual EPS.
+    
+    Args:
+        ticker (str): Start date for earnings (YYYY-MM-DD).
+        limit (int, optional): End date for earnings (YYYY-MM-DD).
+    
+    Returns:
+        dict: Earnings calendar data.
+    """
+    request_params = {"limit": limit}
+    return _get(f"v3/historical/earning_calendar/{ticker}", **request_params)

@@ -22,7 +22,7 @@ get_forex_pairs, get_forex_quote, get_forex_historical, get_crypto_list, get_cry
 get_crypto_historical, get_commodity_list, get_commodity_quote, get_commodity_historical, 
 get_etf_info, get_etf_sector_weighting, get_etf_country_weighting, get_etf_stock_exposure, 
 get_economic_indicator, get_economic_calendar, get_market_risk_premium, get_ipo_calendar, 
-get_stock_news, get_sec_filings, get_sec_rss_feed, get_earnings_calendar, scrape_url]
+get_stock_news, get_sec_filings, get_sec_rss_feed, get_earnings_calendar, get_earnings_historical, scrape_url]
 
 # Initialize conversation history
 conversation_history = []

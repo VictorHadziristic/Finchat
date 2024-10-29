@@ -1,0 +1,34 @@
+You: Get the latest earnings call for spotify
+
+
+> Entering new AgentExecutor chain...
+
+Invoking: `get_earnings_historical` with `{'ticker': 'SPOT', 'limit': 1}`
+
+
+[{'date': '2025-03-17', 'symbol': 'SPOT', 'eps': None, 'epsEstimated': None, 'time': 'bmo', 'revenue': None, 'revenueEstimated': None, 'updatedFromDate': '2024-10-29', 'fiscalDateEnding': '2024-12-30'}]The latest earnings call for Spotify (symbol: SPOT) is scheduled on **March 17, 2025**. The report will be released before market open (BMO). As of now, there are no estimates available for EPS or revenue.
+
+> Finished chain.
+Copilot:  The latest earnings call for Spotify (symbol: SPOT) is scheduled on **March 17, 2025**. The report will be released before market open (BMO). As of now, there are no estimates available for EPS or revenue.
+You: Not next year's, the latest earnings call from this year
+
+
+> Entering new AgentExecutor chain...
+
+Invoking: `get_earnings_historical` with `{'ticker': 'SPOT', 'limit': 1}`
+
+
+[{'date': '2025-03-17', 'symbol': 'SPOT', 'eps': None, 'epsEstimated': None, 'time': 'bmo', 'revenue': None, 'revenueEstimated': None, 'updatedFromDate': '2024-10-29', 'fiscalDateEnding': '2024-12-30'}]
+Invoking: `get_earnings_historical` with `{'ticker': 'SPOT', 'limit': 3}`
+responded: I apologize for the mistake. Let me quickly fetch the previous earnings call information for Spotify (SPOT) in 2024.
+
+[{'date': '2025-03-17', 'symbol': 'SPOT', 'eps': None, 'epsEstimated': None, 'time': 'bmo', 'revenue': None, 'revenueEstimated': None, 'updatedFromDate': '2024-10-29', 'fiscalDateEnding': '2024-12-30'}, {'date': '2024-11-12', 'symbol': 'SPOT', 'eps': None, 'epsEstimated': 1.86, 'time': 'bmo', 'revenue': None, 'revenueEstimated': 4340760000, 'updatedFromDate': '2024-10-29', 'fiscalDateEnding': '2024-09-30'}, {'date': '2024-07-23', 'symbol': 'SPOT', 'eps': 1.33, 'epsEstimated': 1.06, 'time': 'bmo', 'revenue': 4114142763, 'revenueEstimated': 4096959726, 'updatedFromDate': '2024-10-28', 'fiscalDateEnding': '2024-06-30'}]The latest earnings call for Spotify (SPOT) this year occurred on **July 23, 2024**. Here are the details:
+
+- **EPS (Earnings Per Share):** $1.33 (Actual) vs. $1.06 (Estimated)
+- **Revenue:** $4,114,142,763 (Actual) vs. $4,096,959,726 (Estimated)
+
+> Finished chain.
+Copilot:  The latest earnings call for Spotify (SPOT) this year occurred on **July 23, 2024**. Here are the details:
+
+- **EPS (Earnings Per Share):** $1.33 (Actual) vs. $1.06 (Estimated)
+- **Revenue:** $4,114,142,763 (Actual) vs. $4,096,959,726 (Estimated)
