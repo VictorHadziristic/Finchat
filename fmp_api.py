@@ -489,7 +489,7 @@ default is 0.
     Returns:
         dict: News articles related to the stocks.
     """
-    request_params = {"page": page}
+    request_params = {"page": page, "limit": 3}
     if tickers:
         if not isinstance(tickers, list):
             raise ValueError("Parameter 'tickers' must be a list of symbols.")
@@ -498,4 +498,70 @@ default is 0.
         request_params["from"] = from_date
     if to_date:
         request_params["to"] = to_date
-    return _get("v3/stock_news", **request_params)
+    urls = []
+    response = _get("v3/stock_news", **request_params)
+    for result in response:
+        urls.append(result["url"])
+    return urls
+
+
+@tool
+def get_sec_filings(symbol, page=0):
+    """
+    Get SEC filings for a specific company.
+    
+    Args:
+        symbol (str): The stock symbol of the company. [Required]
+        page (int, optional): The page number for pagination. Default is 0.
+    
+    Returns:
+        dict: SEC filings data for the company.
+    """
+    request_params = {"page": page, "type": ["10-K", "10-Q", "20-F"], "limit": 10}
+    return _get(f"v3/sec_filings/{symbol}", **request_params)
+
+@tool
+def get_sec_rss_feed(type=None, from_date=None, to_date=None, is_done=True):
+    """
+    Get the RSS feed of SEC filings.
+    
+    Args:
+        type (str, optional): Type of filing (e.g., '10-K'). Default is None.
+        limit (int, optional): The number of filings to retrieve. Default is 100.
+        from_date (str, optional): Start date for filings (YYYY-MM-DD). Default is None.
+        to_date (str, optional): End date for filings (YYYY-MM-DD). Default is None.
+        is_done (bool, optional): Whether to filter for completed filings. Default is True.
+    
+    Returns:
+        dict: RSS feed of SEC filings.
+    """
+    request_params = {
+        "limit": 10,
+        "isDone": is_done
+    }
+    if type:
+        request_params["type"] = type
+    if from_date:
+        request_params["from"] = from_date
+    if to_date:
+        request_params["to"] = to_date
+    return _get("v4/rss_feed", **request_params)
+
+@tool
+def get_earnings_calendar(from_date=None, to_date=None):
+    """
+    Get a list of upcoming earnings announcements.
+    
+    Args:
+        from_date (str, optional): Start date for earnings (YYYY-MM-DD).
+        to_date (str, optional): End date for earnings (YYYY-MM-DD).
+    
+    Returns:
+        dict: Earnings calendar data.
+    """
+    request_params = {"limit": 10}
+    if from_date:
+        request_params["from"] = from_date
+    if to_date:
+        request_params["to"] = to_date
+    return _get("v3/earning_calendar", **request_params)
