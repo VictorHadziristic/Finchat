@@ -36,6 +36,7 @@ The **Stock Trader Copilot** is an interactive assistant designed to help trader
 2. Install the required dependencies:
     ```bash
     pip install -r requirements.txt
+    playwright install
     ```
 
 3. Set up environment variables (see [Environment Variables](#environment-variables)).
