@@ -1,0 +1,104 @@
+You: What has Airbnb management said about profitability over the last few earnings calls?
+
+
+> Entering new AgentExecutor chain...
+
+Invoking: `search_company` with `{'query': 'Airbnb'}`
+
+
+[{'symbol': 'ABNB', 'name': 'Airbnb, Inc.', 'currency': 'USD', 'stockExchange': 'NASDAQ Global Select', 'exchangeShortName': 'NASDAQ'}, {'symbol': 'ABNB.L', 'name': 'LS 1x Airbnb Tracker ETC', 'currency': 'GBp', 'stockExchange': 'London Stock Exchange', 'exchangeShortName': 'LSE'}, {'symbol': 'ABN1.L', 'name': 'LS 1x Airbnb Tracker ETC', 'currency': 'EUR', 'stockExchange': 'London Stock Exchange', 'exchangeShortName': 'LSE'}, {'symbol': '1ABN.L', 'name': 'LS 1x Airbnb Tracker ETC', 'currency': 'USD', 'stockExchange': 'London Stock Exchange', 'exchangeShortName': 'LSE'}, {'symbol': 'ABN3.L', 'name': 'Leverage Shares 3x Airbnb ETC', 'currency': 'USD', 'stockExchange': 'London Stock Exchange', 'exchangeShortName': 'LSE'}, {'symbol': '3ABN.L', 'name': 'Leverage Shares 3x Airbnb ETC', 'currency': 'GBp', 'stockExchange': 'London Stock Exchange', 'exchangeShortName': 'LSE'}, {'symbol': '3ABE.L', 'name': 'Leverage Shares 3x Airbnb ETC', 'currency': 'EUR', 'stockExchange': 'London Stock Exchange', 'exchangeShortName': 'LSE'}, {'symbol': 'ABN3.DE', 'name': 'Leverage Shares 3x Airbnb ETP Securities', 'currency': 'EUR', 'stockExchange': 'XETRA', 'exchangeShortName': 'XETRA'}, {'symbol': 'SABN.L', 'name': 'Leverage Shares -1x Short Airbnb ETC', 'currency': 'GBp', 'stockExchange': 'London Stock Exchange', 'exchangeShortName': 'LSE'}, {'symbol': 'ABNS.L', 'name': 'Leverage Shares -1x Short Airbnb ETC', 'currency': 'USD', 'stockExchange': 'London Stock Exchange', 'exchangeShortName': 'LSE'}]
+Invoking: `get_sec_filings` with `{'symbol': 'ABNB'}`
+
+
+[{'symbol': 'ABNB', 'fillingDate': '2024-08-06 00:00:00', 'acceptedDate': '2024-08-06 16:03:41', 'cik': '0001559720', 'type': '10-Q', 'link': 'https://www.sec.gov/Archives/edgar/data/1559720/000155972024000024/0001559720-24-000024-index.htm', 'finalLink': 'https://www.sec.gov/Archives/edgar/data/1559720/000155972024000024/abnb-20240630.htm'}, {'symbol': 'ABNB', 'fillingDate': '2024-05-08 00:00:00', 'acceptedDate': '2024-05-08 16:16:11', 'cik': '0001559720', 'type': '10-Q', 'link': 'https://www.sec.gov/Archives/edgar/data/1559720/000155972024000017/0001559720-24-000017-index.htm', 'finalLink': 'https://www.sec.gov/Archives/edgar/data/1559720/000155972024000017/abnb-20240331.htm'}, {'symbol': 'ABNB', 'fillingDate': '2024-02-16 00:00:00', 'acceptedDate': '2024-02-16 16:02:16', 'cik': '0001559720', 'type': '10-K', 'link': 'https://www.sec.gov/Archives/edgar/data/1559720/000155972024000006/0001559720-24-000006-index.htm', 'finalLink': 'https://www.sec.gov/Archives/edgar/data/1559720/000155972024000006/abnb-20231231.htm'}, {'symbol': 'ABNB', 'fillingDate': '2023-11-01 00:00:00', 'acceptedDate': '2023-11-01 16:07:52', 'cik': '0001559720', 'type': '10-Q', 'link': 'https://www.sec.gov/Archives/edgar/data/1559720/000155972023000020/0001559720-23-000020-index.htm', 'finalLink': 'https://www.sec.gov/Archives/edgar/data/1559720/000155972023000020/abnb-20230930.htm'}, {'symbol': 'ABNB', 'fillingDate': '2023-08-03 00:00:00', 'acceptedDate': '2023-08-03 16:05:04', 'cik': '0001559720', 'type': '10-Q', 'link': 'https://www.sec.gov/Archives/edgar/data/1559720/000155972023000015/0001559720-23-000015-index.htm', 'finalLink': 'https://www.sec.gov/Archives/edgar/data/1559720/000155972023000015/abnb-20230630.htm'}, {'symbol': 'ABNB', 'fillingDate': '2023-05-09 00:00:00', 'acceptedDate': '2023-05-09 16:41:30', 'cik': '0001559720', 'type': '10-Q', 'link': 'https://www.sec.gov/Archives/edgar/data/1559720/000155972023000010/0001559720-23-000010-index.htm', 'finalLink': 'https://www.sec.gov/Archives/edgar/data/1559720/000155972023000010/abnb-20230331.htm'}, {'symbol': 'ABNB', 'fillingDate': '2023-02-17 00:00:00', 'acceptedDate': '2023-02-17 16:07:04', 'cik': '0001559720', 'type': '10-K', 'link': 'https://www.sec.gov/Archives/edgar/data/1559720/000155972023000003/0001559720-23-000003-index.htm', 'finalLink': 'https://www.sec.gov/Archives/edgar/data/1559720/000155972023000003/abnb-20221231.htm'}, {'symbol': 'ABNB', 'fillingDate': '2022-11-03 00:00:00', 'acceptedDate': '2022-11-02 17:33:55', 'cik': '0001559720', 'type': '10-Q', 'link': 'https://www.sec.gov/Archives/edgar/data/1559720/000155972022000019/0001559720-22-000019-index.htm', 'finalLink': 'https://www.sec.gov/Archives/edgar/data/1559720/000155972022000019/abnb-20220930.htm'}, {'symbol': 'ABNB', 'fillingDate': '2022-08-03 00:00:00', 'acceptedDate': '2022-08-03 16:06:00', 'cik': '0001559720', 'type': '10-Q', 'link': 'https://www.sec.gov/Archives/edgar/data/1559720/000155972022000012/0001559720-22-000012-index.htm', 'finalLink': 'https://www.sec.gov/Archives/edgar/data/1559720/000155972022000012/abnb-20220630.htm'}, {'symbol': 'ABNB', 'fillingDate': '2022-05-09 00:00:00', 'acceptedDate': '2022-05-09 16:48:00', 'cik': '0001559720', 'type': '10-Q', 'link': 'https://www.sec.gov/Archives/edgar/data/1559720/000155972022000009/0001559720-22-000009-index.htm', 'finalLink': 'https://www.sec.gov/Archives/edgar/data/1559720/000155972022000009/abnb-20220331.htm'}]
+Invoking: `scrape_url` with `{'url': 'https://www.sec.gov/Archives/edgar/data/1559720/000155972024000024/abnb-20240630.htm'}`
+
+
+U.S. Securities and Exchange Commission
+
+# Your Request Originates from an Undeclared Automated Tool
+
+To allow for equitable access to all users, SEC reserves the right to limit
+requests originating from undeclared automated tools. Your request has been
+identified as part of a network of automated tools outside of the acceptable
+policy and will be managed until action is taken to declare your traffic.
+
+Please declare your traffic by updating your user agent to include company
+specific information.
+
+For best practices on efficiently downloading information from SEC.gov,
+including the latest EDGAR filings, visit sec.gov/developer. You can also sign
+up for email updates on the SEC open data program, including best practices
+that make it more efficient to download data, and SEC.gov enhancements that
+may impact scripted downloading processes. For more information, contact
+opendata@sec.gov.
+
+For more information, please see the SEC’s Web Site Privacy and Security
+Policy. Thank you for your i
+Invoking: `scrape_url` with `{'url': 'https://www.sec.gov/Archives/edgar/data/1559720/000155972024000017/abnb-20240331.htm'}`
+
+
+U.S. Securities and Exchange Commission
+
+# Your Request Originates from an Undeclared Automated Tool
+
+To allow for equitable access to all users, SEC reserves the right to limit
+requests originating from undeclared automated tools. Your request has been
+identified as part of a network of automated tools outside of the acceptable
+policy and will be managed until action is taken to declare your traffic.
+
+Please declare your traffic by updating your user agent to include company
+specific information.
+
+For best practices on efficiently downloading information from SEC.gov,
+including the latest EDGAR filings, visit sec.gov/developer. You can also sign
+up for email updates on the SEC open data program, including best practices
+that make it more efficient to download data, and SEC.gov enhancements that
+may impact scripted downloading processes. For more information, contact
+opendata@sec.gov.
+
+For more information, please see the SEC’s Web Site Privacy and Security
+Policy. Thank you for your i
+Invoking: `scrape_url` with `{'url': 'https://www.sec.gov/Archives/edgar/data/1559720/000155972024000006/abnb-20231231.htm'}`
+
+
+U.S. Securities and Exchange Commission
+
+# Your Request Originates from an Undeclared Automated Tool
+
+To allow for equitable access to all users, SEC reserves the right to limit
+requests originating from undeclared automated tools. Your request has been
+identified as part of a network of automated tools outside of the acceptable
+policy and will be managed until action is taken to declare your traffic.
+
+Please declare your traffic by updating your user agent to include company
+specific information.
+
+For best practices on efficiently downloading information from SEC.gov,
+including the latest EDGAR filings, visit sec.gov/developer. You can also sign
+up for email updates on the SEC open data program, including best practices
+that make it more efficient to download data, and SEC.gov enhancements that
+may impact scripted downloading processes. For more information, contact
+opendata@sec.gov.
+
+For more information, please see the SEC’s Web Site Privacy and Security
+Policy. Thank you for your iIt seems there was an issue accessing the detailed contents of Airbnb's recent SEC filings directly. However, you can manually view these filings via the provided links for more specific details:
+
+1. **10-Q Filing from August 6, 2024:** [View Document](https://www.sec.gov/Archives/edgar/data/1559720/000155972024000024/abnb-20240630.htm) - This document should provide details on Airbnb's statements and any commentary on profitability for that period.
+
+2. **10-Q Filing from May 8, 2024:** [View Document](https://www.sec.gov/Archives/edgar/data/1559720/000155972024000017/abnb-20240331.htm) - Another resource for examining profitability discussions.
+
+3. **10-K Filing from February 16, 2024:** [View Document](https://www.sec.gov/Archives/edgar/data/1559720/000155972024000006/abnb-20231231.htm) - This annual report will cover comprehensive insights including management's discussion on profitability.
+
+For specific statements about profitability mentioned in earnings calls, it's typical to find these in the earnings call transcripts or the management discussion and analysis section of these filings. These documents often discuss financial health, strategies towards profitability, and financial expectations. If you have access to a service that provides earnings call transcripts, you might also retrieve this information there.
+
+> Finished chain.
+Copilot:  It seems there was an issue accessing the detailed contents of Airbnb's recent SEC filings directly. However, you can manually view these filings via the provided links for more specific details:
+
+1. **10-Q Filing from August 6, 2024:** [View Document](https://www.sec.gov/Archives/edgar/data/1559720/000155972024000024/abnb-20240630.htm) - This document should provide details on Airbnb's statements and any commentary on profitability for that period.
+
+2. **10-Q Filing from May 8, 2024:** [View Document](https://www.sec.gov/Archives/edgar/data/1559720/000155972024000017/abnb-20240331.htm) - Another resource for examining profitability discussions.
+
+3. **10-K Filing from February 16, 2024:** [View Document](https://www.sec.gov/Archives/edgar/data/1559720/000155972024000006/abnb-20231231.htm) - This annual report will cover comprehensive insights including management's discussion on profitability.
+
+For specific statements about profitability mentioned in earnings calls, it's typical to find these in the earnings call transcripts or the management discussion and analysis section of these filings. These documents often discuss financial health, strategies towards profitability, and financial expectations. If you have access to a service that provides earnings call transcripts, you might also retrieve this information there.
