@@ -1,18 +1,16 @@
 from datetime import date
 from typing import TypedDict, Dict, Any, Optional
-from langchain_community.document_loaders import AsyncChromiumLoader
-from langchain_community.document_transformers import Html2TextTransformer
 from langchain_core.tools import tool
+from requests_html import HTMLSession
 from bs4 import BeautifulSoup
 
 import os
 
-os.environ['USER_AGENT'] = 'myagent'
-
 @tool
 def scrape_url(url: str) -> str:
     """
-    Scrapes the content of a specified URL using an asynchronous Chromium-based loader.
+    Scrapes the content of a specified URL using requests_html with custom headers,
+    enabling JavaScript to render content.
 
     Args:
         url (str): The URL to scrape.
@@ -23,12 +21,20 @@ def scrape_url(url: str) -> str:
     Example:
         content = scrape_url("https://example.com")
     """
-    loader = AsyncChromiumLoader([url])
-    docs = loader.load()
+    headers = {
+        "User-Agent": "Victor Hadziristic victor.hadziristic@gmail.com",
+        "Accept-Encoding": "gzip, deflate",
+        "Host": "www.sec.gov"
+    }
+    
+    session = HTMLSession()
+    response = session.get(url, headers=headers)
 
-    html2text = Html2TextTransformer()
-    docs_transformed = html2text.transform_documents(docs)
-    return docs_transformed[0].page_content[0:1000]
+    soup = BeautifulSoup(response.html.html, "html.parser")
+    text_content = soup.get_text()
+
+    return text_content[:10000]
+
 
 class ToolCall(TypedDict):
     name: str

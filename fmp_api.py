@@ -517,13 +517,9 @@ def get_sec_filings(symbol, page=0):
     Returns:
         dict: SEC filings data for the company.
     """
-    request_params = {"page": page, "type": ["10-K", "10-Q", "20-F"], "limit": 3}
-    urls = []
-    response = _get(f"v3/sec_filings/{symbol}", **request_params)
-    for entry in response:
-        urls.append(entry["link"])
+    request_params = {"page": page, "type": 10, "limit": 20}
 
-    return urls
+    return _get(f"v3/sec_filings/{symbol}", **request_params)
 
 @tool
 def get_sec_rss_feed(type=None, from_date=None, to_date=None, is_done=True):
